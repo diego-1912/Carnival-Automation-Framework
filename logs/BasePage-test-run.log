@@ -1,0 +1,10 @@
+2024-10-15T17:15:18.888Z [info]: Selected Manufacturer option at index: 2
+2024-10-15T17:15:18.889Z [info]: Selected manufacturer at index: 2
+2024-10-15T17:15:20.292Z [info]: Selected Admin dropdown option: Company
+2024-10-15T17:15:20.467Z [info]: Clicked the add button
+2024-10-15T17:15:20.654Z [info]: Filled company details: Name - Testing Company Name - EZ7234, Description - Testing Description - OY6941
+2024-10-15T17:15:21.067Z [info]: Saved company details
+2024-10-15T17:15:22.549Z [info]: Checked and clicked on company "Testing Company Name - EZ7234" if found in the list
+2024-10-15T17:15:23.533Z [info]: Filled company details: Name - Updated Company Name - GR8682, Description - Updated Description - PY8749
+2024-10-15T17:15:23.583Z [info]: Saved company details
+2024-10-15T17:15:23.607Z [info]: Checked and clicked on company "Updated Company Name - GR8682" if found in the list
