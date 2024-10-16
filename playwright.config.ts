@@ -1,14 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
-import path from 'path';
 
-interface CustomOptions {
-  baseURL: string;
-  username: string;
-  password: string;
-}
-
-export default defineConfig<CustomOptions>({
-  testDir: './webops_tests/tests',
+export default defineConfig({
+  testDir: './carnival_tests/tests',
   testMatch: '**/*.spec.ts',
   outputDir: 'test-results/',
   timeout: 180000,
@@ -26,7 +19,6 @@ export default defineConfig<CustomOptions>({
     }],
     ['list'],
   ],
-  globalSetup: path.join(__dirname, 'webops_tests', 'config', 'globalSetup.ts'),
   use: {
     trace: 'on-first-retry',
     actionTimeout: 90000,
@@ -34,22 +26,30 @@ export default defineConfig<CustomOptions>({
     locale: 'en-US',
     viewport: { width: 1280, height: 720 },
     ignoreHTTPSErrors: true,
-    
-    baseURL: process.env.TEST_BASE_URL || 'https://test4.webops.net/do',
-    username: process.env.TEST_USERNAME || 'miguelcorrea',
-    password: process.env.TEST_PASSWORD || 'welcome01',
 
-    storageState: 'auth-state.json',
+    baseURL: process.env.TEST_BASE_URL || 'https://www.carnival.com/',
 
-    // Add screenshot configuration
+    // Screenshot configuration
     screenshot: 'only-on-failure',
-  
   },
   projects: [
     {
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
+      },
+    },
+    {
+      name: 'firefox',
+      use: {
+        ...devices['Desktop Firefox'], // Use Firefox devices for Firefox
+      },
+    },
+    {
+      name: 'mobile-chrome-samsung',
+      use: {
+        ...devices['Galaxy S21'],
+        browserName: 'chromium', // Mobile Chrome browser on Android
       },
     },
   ],

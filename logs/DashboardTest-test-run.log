@@ -1,5 +1,0 @@
-2024-10-15T17:14:09.894Z [info]: Initializing DashboardPage with base URL: https://test4.webops.net/do
-2024-10-15T17:14:09.897Z [info]: Starting test: Verify WebOps logo and dashboard elements
-2024-10-15T17:14:09.898Z [info]: Navigating to https://test4.webops.net/do/homePage
-2024-10-15T17:14:11.924Z [info]: Successfully navigated to home page
-2024-10-15T17:14:11.953Z [info]: WebOps logo visibility check passed

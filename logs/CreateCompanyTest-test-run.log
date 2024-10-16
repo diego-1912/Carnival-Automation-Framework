@@ -1,0 +1,23 @@
+2024-10-16T20:53:52.928Z [info]: User navigates to Carnival Home Page
+2024-10-16T20:53:52.934Z [info]: Navigating to Carnival Home Page: https://www.carnival.com/
+2024-10-16T20:54:03.231Z [info]: Successfully navigated to Carnival Home Page
+2024-10-16T20:54:03.233Z [info]: Selecting destination and duration for cruise search
+2024-10-16T20:54:09.036Z [info]: Search initiated for cruises to The Bahamas with 6-9 days duration
+2024-10-16T20:54:09.038Z [info]: Extracting and validating cruise durations
+2024-10-16T20:54:17.298Z [info]: Cruise durations validated successfully
+2024-10-16T20:54:18.046Z [info]: User navigates to Carnival Home Page
+2024-10-16T20:54:18.047Z [info]: Navigating to Carnival Home Page: https://www.carnival.com/
+2024-10-16T20:54:25.497Z [info]: Successfully navigated to Carnival Home Page
+2024-10-16T20:54:25.498Z [info]: Selecting destination and duration for cruise search
+2024-10-16T20:54:31.044Z [info]: Search initiated for cruises to The Bahamas with 6-9 days duration
+2024-10-16T20:54:31.045Z [info]: Setting price filter: Min Price = 600, Max Price = 700
+2024-10-16T20:54:36.659Z [info]: Extracted prices:
+2024-10-16T20:54:39.742Z [info]: Price filter validated successfully
+2024-10-16T20:54:40.477Z [info]: User navigates to Carnival Home Page
+2024-10-16T20:54:40.477Z [info]: Navigating to Carnival Home Page: https://www.carnival.com/
+2024-10-16T20:54:41.919Z [info]: Successfully navigated to Carnival Home Page
+2024-10-16T20:54:41.921Z [info]: Selecting destination and duration for cruise search
+2024-10-16T20:54:47.532Z [info]: Search initiated for cruises to The Bahamas with 6-9 days duration
+2024-10-16T20:54:47.533Z [info]: Verifying that the low-to-high price option is selected by default
+2024-10-16T20:54:49.836Z [info]: Verified that results are sorted by price in ascending order
+2024-10-16T20:54:50.590Z [info]: All tests in Part 1 completed. Cleaning up resources if needed.

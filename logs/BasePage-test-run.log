@@ -1,10 +1,19 @@
-2024-10-15T17:15:18.888Z [info]: Selected Manufacturer option at index: 2
-2024-10-15T17:15:18.889Z [info]: Selected manufacturer at index: 2
-2024-10-15T17:15:20.292Z [info]: Selected Admin dropdown option: Company
-2024-10-15T17:15:20.467Z [info]: Clicked the add button
-2024-10-15T17:15:20.654Z [info]: Filled company details: Name - Testing Company Name - EZ7234, Description - Testing Description - OY6941
-2024-10-15T17:15:21.067Z [info]: Saved company details
-2024-10-15T17:15:22.549Z [info]: Checked and clicked on company "Testing Company Name - EZ7234" if found in the list
-2024-10-15T17:15:23.533Z [info]: Filled company details: Name - Updated Company Name - GR8682, Description - Updated Description - PY8749
-2024-10-15T17:15:23.583Z [info]: Saved company details
-2024-10-15T17:15:23.607Z [info]: Checked and clicked on company "Updated Company Name - GR8682" if found in the list
+2024-10-16T20:54:07.440Z [info]: Clicked 'Sail To' button
+2024-10-16T20:54:07.976Z [info]: Clicked 'Bahamas' button
+2024-10-16T20:54:08.161Z [info]: Clicked 'Duration' button
+2024-10-16T20:54:08.394Z [info]: Clicked '6 to 9 days' button
+2024-10-16T20:54:09.035Z [info]: Clicked 'SEARCH CRUISES' button
+2024-10-16T20:54:29.686Z [info]: Clicked 'Sail To' button
+2024-10-16T20:54:30.247Z [info]: Clicked 'Bahamas' button
+2024-10-16T20:54:30.424Z [info]: Clicked 'Duration' button
+2024-10-16T20:54:30.641Z [info]: Clicked '6 to 9 days' button
+2024-10-16T20:54:31.044Z [info]: Clicked 'SEARCH CRUISES' button
+2024-10-16T20:54:33.371Z [info]: Opened vacation budget filter
+2024-10-16T20:54:33.400Z [info]: Entered min price: 600
+2024-10-16T20:54:33.442Z [info]: Entered max price: 700
+2024-10-16T20:54:33.608Z [info]: Submitted price filter
+2024-10-16T20:54:46.203Z [info]: Clicked 'Sail To' button
+2024-10-16T20:54:46.741Z [info]: Clicked 'Bahamas' button
+2024-10-16T20:54:46.937Z [info]: Clicked 'Duration' button
+2024-10-16T20:54:47.077Z [info]: Clicked '6 to 9 days' button
+2024-10-16T20:54:47.532Z [info]: Clicked 'SEARCH CRUISES' button
