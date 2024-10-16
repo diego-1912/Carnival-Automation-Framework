@@ -1,28 +1,44 @@
-# WebOps Automation Framework
+# Carnival Automation Framework
+
+## Table of Contents
+- [Project Description](#project-description)
+- [Brief Overview](#brief-overview)
+- [Important Links](#important-links)
+- [Purpose and Main Features](#purpose-and-main-features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Project Structure](#project-structure)
+- [File Explanations](#file-explanations)
+- [Configuration](#configuration)
+- [Usage](#usage)
+  - [Running Tests](#running-tests)
+  - [Creating Tests](#creating-tests)
+- [Framework Architecture](#framework-architecture)
+- [Best Practices](#best-practices)
+- [Recommended IDE](#recommended-ide)
+  - [Visual Studio Code Setup](#visual-studio-code-setup)
+  - [Benefits of Playwright Test for VSCode](#benefits-of-playwright-test-for-vscode)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## Project Description
-This project is an automation testing framework for WebOps, built using TypeScript, JavaScript, and Playwright. It aims to provide a robust, efficient, and maintainable solution for automated testing of the WebOps application.
+This project is an automation testing framework for Carnival, built using TypeScript, JavaScript, and Playwright. It aims to provide a robust, efficient, and maintainable solution for automated testing of the Carnival website, https://www.carnival.com/.
 
-### Brief Overview
+## Brief Overview
 The framework utilizes Playwright's powerful capabilities to perform end-to-end testing across different browsers. It is designed with a focus on readability, extensibility, and ease of use.
 
-### Purpose and Main Features
-- End-to-end testing of WebOps application
+## Important Links
+- [Test Suite](https://docs.google.com/document/d/1ftrjMORw8UtkmTlLhq3cUIDM3PrGs0k38KFZpCwJmZM/edit?usp=sharing)
+- [Execution Report](https://docs.google.com/document/d/1Q3oH_zLcutuFMaUUTWcbT46TGMeB_jQcBQHvHnKH-dY/edit?usp=sharing)
+- [Bug Report](https://docs.google.com/document/d/1Qa5AtJ57KeXy_ZGbjFPQbvbOV21X80tRbQ4boyZg1x8/edit?usp=sharing)
+
+## Purpose and Main Features
+- End-to-end testing of the Carnival application
 - Cross-browser testing support
 - Parallel test execution
 - Detailed HTML reporting
 - Configurable test environments
-
-## Table of Contents
-1. [Prerequisites](#prerequisites)
-2. [Installation](#installation)
-3. [Project Structure](#project-structure)
-4. [Usage](#usage)
-5. [Framework Architecture](#framework-architecture)
-6. [Configuration](#configuration)
-7. [Best Practices](#best-practices)
-8. [Naming Standards](#naming-standards)
-9. [Development Environment](#development-environment)
 
 ## Prerequisites
 - Node.js (version 14 or higher recommended)
@@ -41,7 +57,7 @@ The following packages will be installed during the installation process:
    ```
 2. Navigate to the project directory:
    ```
-   cd webops-ui-testing-framework
+   cd TEST AUTOMATION CHALLENGE
    ```
 3. Install the required dependencies:
    ```
@@ -62,137 +78,53 @@ The following packages will be installed during the installation process:
 
 ## Project Structure
 ```
-WEBOPS UI TESTING FRAMEWORK/
-│
-├── node_modules/
-├── playwright-report/
-│   ├── data/
-│   ├── trace/
-│   └── index.html
-├── test-results/
-├── webops_tests/
-│   ├── config/
-│   ├── Fixtures/
-│   ├── helpers/
-│   ├── pages/
-│   │   ├── admin/
-│   │   ├── login/
+TEST AUTOMATION CHALLENGE
+├── carnival_tests
+│   ├── config
+│   │   └── Logger.ts
+│   ├── pages
 │   │   ├── BasePage.ts
 │   │   ├── DashboardPage.ts
-│   │   └── NavigationMenu.ts
-│   └── tests/
-│       ├── end-to-end-flow-tests/
-│       └── page-specific-tests/
-├── storageState.json
-├── auth-state.json
-├── global.d.ts
+│   │   ├── ItineraryPage.ts
+│   │   └── ResultsPage.ts
+│   └── tests
+│       └── end-to-end-tests
+│           ├── carnival-US1-tests.spec.ts
+│           └── carnival-US2-tests.spec.ts
+├── logs
+├── node_modules
+├── playwright-report
+│   └── index.html
+├── test-results
 ├── package-lock.json
 ├── package.json
 ├── playwright.config.ts
-├── test-run.log
-└── tsconfig.json
+└── README.md
 ```
 
-### Key Directories and Files
+## File Explanations
 
-- `playwright-report/`: Contains the HTML report generated after test execution, including test data and traces.
-
-- `test-results/`: Stores the raw output and artifacts from test runs.
-
-- `webops_tests/`: The core directory for all test-related code.
-  - `config/`: Configuration files for test setup and environment.
-  - `Fixtures/`: Reusable test fixtures for setting up test conditions.
-  - `helpers/`: Utility functions and helper methods used across tests.
-  - `pages/`: Page Object Model (POM) implementations.
-    - `BasePage.ts`: The base class for all page objects.
-    - `DashboardPage.ts` and `NavigationMenu.ts`: Specific page objects.
-  - `tests/`: Contains all test scripts.
-    - `end-to-end-flow-tests/`: Tests that cover complete user flows.
-    - `page-specific-tests/`: Tests focused on individual pages or components.
-
-- `storageState.json` and `auth-state.json`: Store session data, used for maintaining login state across tests.
-
-- `global.d.ts`: Global TypeScript declarations.
-
-- `playwright.config.ts`: The main configuration file for Playwright, defining test execution settings.
-
-- `package.json` and `package-lock.json`: Define the project dependencies and scripts.
-
-- `tsconfig.json`: TypeScript compiler configuration.
-
-This structure follows a well-organized pattern for test automation, separating concerns between configuration, page objects, test helpers, and the actual test scripts. The use of a Page Object Model (evidenced by the `pages` directory) suggests a focus on maintainability and reusability in the test code.
-
-## Usage
-
-### Running Tests
-
-1. Run all tests:
-   ```
-   npx playwright test
-   ```
-
-2. Run a single test file:
-   ```
-   npx playwright test tests/example.spec.ts
-   ```
-
-3. Run a set of test files:
-   ```
-   npx playwright test tests/login/ tests/dashboard/
-   ```
-
-4. Run tests in headed mode:
-   ```
-   npx playwright test --headed
-   ```
-
-5. Run tests in a specific browser:
-   ```
-   npx playwright test --project=chromium
-   ```
-
-6. Run tests with debug mode:
-   ```
-   npx playwright test --debug
-   ```
-
-7. Run tests and generate HTML report:
-   ```
-   npx playwright test --reporter=html
-   ```
-
-8. Run tests with specific tag:
-   ```
-   npx playwright test --grep @smoke
-   ```
-
-### Creating Tests
-
-Add new test files with the `.spec.ts` extension in the `webops_tests/tests/` directory.
-
-### Environment Variables
-
-Override environment variables when running tests:
-```
-TEST_BASE_URL=https://custom-url.com TEST_USERNAME=user TEST_PASSWORD=pass npx playwright test
-```
-
-### Debugging
-
-To debug tests, you can use the Playwright Inspector. Run your tests with the `--debug` flag:
-```
-npx playwright test --debug
-```
-
-This will open the Playwright Inspector, allowing you to step through your tests, inspect the DOM, and more.
-
-## Framework Architecture
-The framework follows the Page Object Model (POM) design pattern, which enhances test maintenance and reduces code duplication. Key components include:
-
-- BasePage: A foundation class for all page objects, providing common functionalities.
-- Page Objects: Represent web pages or components, encapsulating page-specific elements and actions.
-- Fixtures: Set up consistent test environments and data.
-- Helpers: Utility functions for common operations across tests.
+- `carnival_tests/`: Main directory for test-related files
+  - `config/`:
+    - `Logger.ts`: Configuration for logging using Winston
+  - `pages/`: Page Object Model (POM) files
+    - `BasePage.ts`: Base class for all page objects
+    - `DashboardPage.ts`: Page object for the dashboard
+    - `ItineraryPage.ts`: Page object for the itinerary page
+    - `ResultsPage.ts`: Page object for the results page
+  - `tests/`:
+    - `end-to-end-tests/`:
+      - `carnival-US1-tests.spec.ts`: End-to-end tests for User Story 1
+      - `carnival-US2-tests.spec.ts`: End-to-end tests for User Story 2
+- `logs/`: Directory for log files
+- `node_modules/`: Directory for installed Node.js packages
+- `playwright-report/`:
+  - `index.html`: HTML report generated after test execution
+- `test-results/`: Directory for test execution results
+- `package-lock.json`: Lock file for npm dependencies
+- `package.json`: Project configuration and dependencies
+- `playwright.config.ts`: Playwright configuration file
+- `README.md`: This file, containing project documentation
 
 ## Configuration
 The main configuration file is `playwright.config.ts`. It includes settings for:
@@ -203,7 +135,52 @@ The main configuration file is `playwright.config.ts`. It includes settings for:
 - Browser settings
 - Base URL and authentication credentials
 
-Test environments can be configured by modifying the `playwright.config.ts` file or by using environment variables as shown in the Usage section.
+## Usage
+
+### Running Tests
+1. Run all tests:
+   ```
+   npx playwright test
+   ```
+2. Run a single test file:
+   ```
+   npx playwright test tests/example.spec.ts
+   ```
+3. Run a set of test files:
+   ```
+   npx playwright test tests/login/ tests/dashboard/
+   ```
+4. Run tests in headed mode:
+   ```
+   npx playwright test --headed
+   ```
+5. Run tests in a specific browser:
+   ```
+   npx playwright test --project=chromium
+   ```
+6. Run tests with debug mode:
+   ```
+   npx playwright test --debug
+   ```
+7. Run tests and generate HTML report:
+   ```
+   npx playwright test --reporter=html
+   ```
+8. Run tests with specific tag:
+   ```
+   npx playwright test --grep @smoke
+   ```
+
+### Creating Tests
+Add new test files with the `.spec.ts` extension in the `carnival_tests/tests/` directory.
+
+## Framework Architecture
+The framework follows the Page Object Model (POM) design pattern, which enhances test maintenance and reduces code duplication. Key components include:
+
+- BasePage: A foundation class for all page objects, providing common functionalities.
+- Page Objects: Represent web pages or components, encapsulating page-specific elements and actions.
+- Fixtures: Set up consistent test environments and data.
+- Helpers: Utility functions for common operations across tests.
 
 ## Best Practices
 - Use descriptive names for test files and test cases
@@ -220,49 +197,13 @@ Test environments can be configured by modifying the `playwright.config.ts` file
 - Leverage Playwright's built-in waiting mechanisms to handle dynamic content
 - Write tests that are resilient to minor UI changes
 - Use CI/CD pipelines to run tests automatically on code changes
-- Try to use locators based on role and label supported by Playwright, as they are more resilient to DOM changes. For example:
-  ```typescript
-  // Prefer this:
-  await page.getByRole('button', { name: 'Submit' }).click();
-  
-  // Over this:
-  await page.click('#submit-button');
-  ```
+- Try to use locators based on role and label supported by Playwright, as they are more resilient to DOM changes
 
-## Naming Standards
-
-### Class Naming
-- Classes related to pages end with "page.ts"
-- Classes related to tests end with "spec.ts"
-- Fixture names end with "fixture"
-
-### Naming Conventions for UI Automation Elements and Methods
-
-| Element Type | Locator Naming | Method Naming |
-|--------------|----------------|---------------|
-| Accordion Header | Accordion Header name + suffix "Accordion" | Starts with "expand" |
-| | Example: contactAccordion | Example: expandContactAccordion |
-| Button | Button name + suffix "Button" | Starts with "click" |
-| | Example: saveButton | Example: clickSaveButton |
-| Checkbox | Checkbox name + suffix "Checkbox" | Starts with "check" |
-| | Example: activeCheckbox | Example: checkActiveCheckbox |
-| Dropdown | Dropdown name + suffix "Dropdown" | Starts with "select" |
-| | Example: countryDropdown | Example: selectCountry |
-| Input Field | Input name + suffix "Input" | Starts with "set" or "search" |
-| | Example: searchInput, numberOfDaysInput | Example: setNumberOfDays, searchName |
-| Link | Link name + suffix "Link" | Starts with "open" |
-| | Example: forgotPasswordLink | Example: openPasswordLink |
-| Table | Table name + suffix "Table" | Starts with "select" |
-| | Example: customersTable | Example: selectCustomerTable |
-
-## Development Environment
-
-### Recommended IDE
+## Recommended IDE
 We recommend using Visual Studio Code (VS Code) as the Integrated Development Environment (IDE) for this project. VS Code offers excellent support for TypeScript and has a native Playwright extension that enhances the development and debugging experience for Playwright tests.
 
 ### Visual Studio Code Setup
 1. Download and install Visual Studio Code from [https://code.visualstudio.com/](https://code.visualstudio.com/)
-
 2. Install the Playwright Test for VSCode extension:
    - Open VS Code
    - Go to the Extensions view (Ctrl+Shift+X)

@@ -2,7 +2,7 @@ import winston from 'winston';
 import fs from 'fs';
 import path from 'path';
 
-class ProjectLogger {
+ class ProjectLogger {
   private static instance: ProjectLogger;
   private loggers: Map<string, winston.Logger> = new Map();
   private logDir: string = 'logs';
