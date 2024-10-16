@@ -1,8 +1,8 @@
 import { test as base, Page, expect } from '@playwright/test';
-import ProjectLogger from '../config/Logger';
-import { DashboardPage } from '../pages/DashboardPage';
-import { ResultsPage } from '../pages/ResultsPage';
-import { ItineraryPage } from '../pages/ItineraryPage';
+import ProjectLogger from '../../config/Logger';
+import { DashboardPage } from '../../pages/DashboardPage';
+import { ResultsPage } from '../../pages/ResultsPage';
+import { ItineraryPage } from '../../pages/ItineraryPage';
 
 const logger = ProjectLogger.getLogger('CreateCompanyTest');
 
